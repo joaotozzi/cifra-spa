@@ -1,3 +1,4 @@
+import { Cifra } from './../models/cifra.models';
 import { CifraService } from './../services/cifra.service';
 import { Component, OnInit } from '@angular/core';
 
@@ -13,7 +14,9 @@ export class CifraComponent implements OnInit {
   constructor(private service: CifraService) { }
 
   ngOnInit(): void {
-    this.cifra = this.service.cifraFormatadaParaHTML;
+    this.service.cifra.subscribe((cifra : Cifra) => {
+      this.cifra = cifra;
+    });
   }
 
 }
