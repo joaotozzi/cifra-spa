@@ -9,8 +9,8 @@ export class CifraService {
     "titulo": "Ele Continua Sendo Bom",
     "compositor": "Paulo César Baruk (part. Marcela Taís)",
     "linkYoutube": "https://www.youtube.com/watch?v=LQPYaPNGa38",
-    "andamento": 100,
-    "tomOriginal": "F",
+    "andamento": 120,
+    "tomOriginal": "Gb",
     "secoes": [
       {
         "posicao": 1,
