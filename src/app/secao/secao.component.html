@@ -1,0 +1,10 @@
+<div id="secao">
+    <div id="cabecalho">
+        <h1 id="secao-titulo">{{secao.nome}}</h1>
+        <p id="nota-ensaio">{{secao.notaDeEnsaio}}</p>
+    </div>
+
+    <div *ngFor="let linha of secao.linhas">
+      <p class="linha" [innerHTML]="converterParaHTML(linha.conteudo)"></p>
+    </div>
+</div>
