@@ -1,6 +1,7 @@
 import { Cifra } from './../models/cifra.models';
 import { CifraService } from './../services/cifra.service';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-cifra',
@@ -11,10 +12,13 @@ export class CifraComponent implements OnInit {
 
   cifra: any;
 
-  constructor(private service: CifraService) { }
+
+  constructor(private service: CifraService, private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.service.cifra.subscribe((cifra : Cifra) => {
+    const id = this.route.snapshot.paramMap.get('id');
+
+    this.service.cifra(id).subscribe((cifra : Cifra) => {
       this.cifra = cifra;
     });
   }
