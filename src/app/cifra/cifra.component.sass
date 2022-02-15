@@ -1,56 +1,86 @@
-$fonte-principal: Helvetica, sans-serif
+*
+  font-family: sans-serif
 
-.conteudo
-  margin: auto
-  width: 60%
-  padding: 10px
+.box
+  display: flex
+  flex-direction: column
+  gap: 30px
+  align-items: center
 
-#cabecalho
-  position: relative
+.cabecalho
+  display: flex
+  flex-direction: row
+  justify-content: space-around
+  align-items: center
+
+.cabecalho-item
+  display: block
+
+#voltar
+  width: 10%
+  text-align: center
+  text-decoration: none
+  color: black
+
+#tom
+  width: 10%
+  text-align: center
+  background-color: #c9c1c1
+  padding: 5px 0 5px 0
 
 #cifra-titulo
   text-align: center
   margin: 0
-  font-family: $fonte-principal
-  font-size: 22px
-  vertical-align: middle
-
-.cifra-info
-  padding-left: 10px
-  font-size: 14px
-  font-family: $fonte-principal
 
 #cifra-compositor
   text-align: center
-  margin-top: 0
-  color: #747272
-  padding: 0
-  font-size: 12px
-
-#tom
-  font-family: $fonte-principal
-  font-size: 13px
-  background-color: #ebe8e8
-  border-radius: 5%
-  width: 3%
-  padding: 10px 15px 10px 15px
-  diplay: inline-block
-  position: absolute
-  top: 0em
-  right: 0em
   margin: 0
-  text-align: center
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px)
+  .item
+    width: 70%
+
+  #cifra-titulo
+    font-size: 20px
+
+  #cifra-compositor
+    font-size: 12px
+
+  #voltar
+    font-size: 10px
 
 
-#voltar
-  font-family: $fonte-principal
-  font-size: 13px
-  border-radius: 5%
-  font-size: 11px
-  width: 10%
-  padding: 10px 15px 10px 15px
-  diplay: inline-block
-  position: absolute
-  top: 0em
-  left: 0em
-  text-decoration: none
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)
+  .item
+    width: 70%
+
+  #cifra-titulo
+    font-size: 25px
+
+  #cifra-compositor
+    font-size: 12px
+
+  #voltar
+    font-size: 12px
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px)
+  .item
+    width: 60%
+
+  #cifra-titulo
+    font-size: 30px
+
+  #cifra-compositor
+    font-size: 15px
+
+  #voltar
+    font-size: 15px
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px)
+  .item
+    width: 45%
+

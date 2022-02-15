@@ -1,12 +1,14 @@
-<div class="conteudo">
-  <div id="cabecalho">
-    <a href="cifras" id="voltar">VOLTAR</a>
-    <p class="cifra-info" id="tom">{{ cifra.tomOriginal }}</p>
-    <h1 id="cifra-titulo">{{ cifra.titulo }}</h1>
-    <p class="cifra-info" id="cifra-compositor">{{ cifra.compositor }}</p>
+<div class="box">
+  <div class="item cabecalho">
+    <a href="cifras" id="voltar" class="cabecalho-item">VOLTAR</a>
+    <div id="titulo-principal" class="cabecalho-item">
+      <h1 id="cifra-titulo">{{ cifra.titulo }}</h1>
+      <p id="cifra-compositor">{{ cifra.compositor }}</p>
+    </div>
+    <p id="tom" class="cabecalho-item">{{ cifra.tomOriginal }}</p>
   </div>
 
-  <div *ngFor="let secao of cifra.secoes">
+  <div *ngFor="let secao of cifra.secoes" class="item">
     <app-secao [secao]="secao"></app-secao>
   </div>
 </div>

@@ -1,14 +1,13 @@
-<div class="conteudo">
-  <h1 id="titulo">Cifras</h1>
+<h1 id="titulo">Cifras</h1>
 
-  <div id="painel-busca">
+<div class="box">
+  <div id="painel-busca" class="item">
     <input id="busca" type="text" />
     <button id="btn-pesquisar">PESQUISAR</button>
-    <button id="btn-nova-cifra">NOVA CIFRA</button>
   </div>
 
-  <div *ngFor="let cifra of cifras" class="cifra">
-    <a href="cifras/{{cifra.id}}" class="link-cifra">
+  <div *ngFor="let cifra of cifras" class="item">
+    <a href="cifras/{{ cifra.id }}" class="link-cifra">
       <p class="nome-cifra">{{ cifra.titulo }}</p>
       <p class="compositor-cifra">{{ cifra.compositor }}</p>
     </a>

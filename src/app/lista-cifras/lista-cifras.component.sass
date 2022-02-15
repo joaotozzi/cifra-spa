@@ -1,55 +1,70 @@
-$fonte-principal: Helvetica, sans-serif
-
-.conteudo
-  margin: auto
-  width: 60%
-  padding: 10px
+*
+  font-family: sans-serif
 
 #titulo
-  font-family: $fonte-principal
   text-align: center
 
-#painel-busca
-  display: grid
-  grid-template-columns: 3fr 1fr 1fr
-  padding-bottom: 30px
-  border-bottom: 1px solid #ddd9d9
+.box
+  display: flex
+  flex-direction: column
+  gap: 30px
+  align-items: center
 
-#btn-nova-cifra
-  margin: 0 10px 0 10px
-  padding: 10px 0 10px 0
-  background-color: #222121
-  border-radius: 5px
-  border: none
-  color: white
+.item
+  border-bottom: 1px solid #ddd9d9
+  border-top: 1px solid #ddd9d9
+
+#painel-busca
+  display: flex
+  flex-direction: row
+  justify-content: center
+  border: 0
+
+#busca
+  width: 60%
+
+#busca:focus
+  outline: none
 
 #btn-pesquisar
-  margin-right: 20px
   background-color: #222121
   border-radius: 0px 5px 5px 0px
   border: none
   color: white
-
-.cifra
-  border-bottom: 1px solid #ddd9d9
+  padding: 10px 5px 10px 5px
+  font-size: 10px
 
 .link-cifra
   text-decoration: none
 
 .nome-cifra
-  font-family: $fonte-principal
   color: black
   font-size: 25px
   margin-bottom: 0
   margin-top: 20px
 
 .compositor-cifra
-  font-family: $fonte-principal
   color: #a8a1a1
   font-size: 16px
   margin-top: 3px
   margin-bottom: 20px
 
-#busca
-  margin-left: 10px
-  border-radius: 5px 0 0 5px
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px)
+  .item
+    width: 70%
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)
+  .item
+    width: 70%
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px)
+  .item
+    width: 60%
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px)
+  .item
+    width: 45%

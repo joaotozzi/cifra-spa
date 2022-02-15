@@ -1,30 +1,42 @@
-$fonte-principal: sans-serif
+.linha
+    position: relative
+    white-space: nowrap
+    padding-bottom: 10px
 
-#cabecalho
-    padding: 20px 0 20px 0
+h1
+  margin: 0
 
 #secao-titulo
-    font-family: $fonte-principal
-    font-size: 18px
-    width: 100%
     border-bottom: 1px solid #ddd9d9
     line-height: 0.1em
-    margin: 10px 0 10px
 
 #nome-titulo
     background:#fff
-    padding:0 10px 0 0
+    padding-right: 10px
 
-#nota-ensaio
-    text-align: right
-    font-style: italic
-    margin: 0
-    font-family: $fonte-principal
-    color: #a6aba7
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px)
+  p
     font-size: 14px
+  h1
+    font-size: 20px
+  #cabecalho
+    padding-bottom: 10px
 
-.linha
-    font-family: $fonte-principal
-    position: relative
-    padding-bottom: 16px
-    white-space: nowrap
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)
+  p
+    font-size: 18px
+  h1
+    font-size: 24px
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px)
+  p
+    font-size: 20px
+  h1
+    font-size: 26px
+  #cabecalho
+    padding-bottom: 2px
+

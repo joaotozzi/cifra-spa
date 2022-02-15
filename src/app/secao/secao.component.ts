@@ -19,7 +19,7 @@ export class SecaoComponent implements OnInit {
     return this.sanitizer.bypassSecurityTrustHtml(
       conteudo
         .replace(/ {2,}/g, '&nbsp;&nbsp;&nbsp;')
-        .replace(/\[/g, '<sup style="position: absolute;font-size: 16px;top: -1.3em;font-weight: bold">')
+        .replace(/\[/g, '<sup style="position: absolute;font-size: 1em;top: -1em;font-weight: bold">')
         .replace(/\]/g, '</sup>')
     );
   }

@@ -8,7 +8,7 @@ import { ResumoCifra } from '../models/resumo-cifra.model';
   providedIn: 'root'
 })
 export class CifraService {
-  private url = 'http://localhost:8080/cifras';
+  private url = 'https://cifra-api.herokuapp.com/cifras';
 
   constructor(private httpClient : HttpClient) { }
 
