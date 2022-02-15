@@ -39,20 +39,37 @@
 
 .nome-cifra
   color: black
-  font-size: 25px
   margin-bottom: 0
   margin-top: 20px
 
 .compositor-cifra
   color: #a8a1a1
-  font-size: 16px
   margin-top: 3px
   margin-bottom: 20px
+
+// Smartphones
+@media (min-width: 0px)
+  .item
+    width: 85%
+
+  .nome-cifra
+    font-size: 15px
+
+  .compositor-cifra
+    font-size: 10px
+
+
 
 // Small devices (landscape phones, 576px and up)
 @media (min-width: 576px)
   .item
     width: 70%
+
+  .nome-cifra
+    font-size: 25px
+
+  .compositor-cifra
+    font-size: 12px
 
 // Medium devices (tablets, 768px and up)
 @media (min-width: 768px)
