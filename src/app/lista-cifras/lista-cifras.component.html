@@ -2,8 +2,12 @@
 
 <div class="box">
   <div id="painel-busca" class="item">
-    <input id="busca" type="text" />
-    <button id="btn-pesquisar">PESQUISAR</button>
+    <input id="busca" [(ngModel)]="busca"  (keyup.enter)="pesquisar()"/>
+    <button type="button" id="btn-pesquisar" (click)="pesquisar()">PESQUISAR</button>
+  </div>
+
+  <div *ngIf="cifraNaoEncontrada">
+    <p class="erro">nenhuma cifra foi encontrada para esta pesquisa</p>
   </div>
 
   <div *ngFor="let cifra of cifras" class="item">
