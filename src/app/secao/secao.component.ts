@@ -16,12 +16,12 @@ export class SecaoComponent implements OnInit {
   }
 
   converterParaHTML(conteudo: string) {
-    return this.sanitizer.bypassSecurityTrustHtml(
-      conteudo
-        .replace(/ {2,}/g, '&nbsp;&nbsp;&nbsp;')
-        .replace(/\[/g, '<sup style="position: absolute;font-size: 1em;top: -1em;font-weight: bold">')
-        .replace(/\]/g, '</sup>')
-    );
+    conteudo = conteudo.replace(/\] {1,}\[/g, "&nbsp;&nbsp");
+    conteudo = '<span style="position: relative;display: inline-block; padding-bottom: 1em">' + conteudo.replace(/\s/g, '</span> <span style="position: relative;display: inline-block; padding-bottom: 1em">') + "</span>";
+    conteudo = conteudo.replace(/\[/g, '<sup style="position: absolute;font-size: 1em;top: -1em;font-weight: bold">');
+    conteudo = conteudo.replace(/\]/g, '</sup>');
+
+    return this.sanitizer.bypassSecurityTrustHtml(conteudo);
   }
 
 }

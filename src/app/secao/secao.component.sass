@@ -1,10 +1,14 @@
 .linha
     position: relative
-    white-space: nowrap
-    padding-bottom: 10px
+    //white-space: nowrap
 
 h1
   margin: 0
+
+#nota-ensaio
+  text-align: right
+  color: #999999
+  margin: 10px 0 10px 0
 
 #secao-titulo
     border-bottom: 1px solid #ddd9d9
@@ -17,11 +21,14 @@ h1
 //Smartphones
 @media (min-width: 0px)
   p
-    font-size: 11px
-  h1
     font-size: 14px
+  h1
+    font-size: 16px
   #cabecalho
     padding-bottom: 5px
+
+  #nota-ensaio
+    font-size: 11px
 
 
 // Small devices (landscape phones, 576px and up)
@@ -40,6 +47,9 @@ h1
     font-size: 18px
   h1
     font-size: 24px
+
+  #nota-ensaio
+    font-size: 17px
 
 // Large devices (desktops, 992px and up)
 @media (min-width: 992px)
