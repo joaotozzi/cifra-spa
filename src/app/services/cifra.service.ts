@@ -10,6 +10,9 @@ import { ResumoCifra } from '../models/resumo-cifra.model';
 export class CifraService {
   private url = 'https://cifra-api.herokuapp.com/cifras';
 
+  tomAtual!: string;
+  tomOriginal! : string;
+
   constructor(private httpClient : HttpClient) { }
 
   cifra(id: any) : Observable<Cifra> {
@@ -24,6 +27,10 @@ export class CifraService {
     return this.httpClient.get<ResumoCifra[]>(this.url, {
       params: new HttpParams().set('titulo', busca)
   });
+  }
+
+  mudarTom(id: any){
+    return this.httpClient.get<Cifra>(this.url + "/" + id + "/tom/" + this.tomAtual);
   }
 
 }

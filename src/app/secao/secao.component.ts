@@ -18,7 +18,7 @@ export class SecaoComponent implements OnInit {
   converterParaHTML(conteudo: string) {
     conteudo = conteudo.replace(/\] {1,}\[/g, "&nbsp;&nbsp");
     conteudo = '<span style="position: relative;display: inline-block; padding-bottom: 1em">' + conteudo.replace(/\s/g, '</span> <span style="position: relative;display: inline-block; padding-bottom: 1em">') + "</span>";
-    conteudo = conteudo.replace(/\[/g, '<sup style="position: absolute;font-size: 1em;top: -1em;font-weight: bold">');
+    conteudo = conteudo.replace(/\[/g, '<sup style="position: absolute;font-size: 1em;top: -1em;font-weight: bold; color: #cb6868">');
     conteudo = conteudo.replace(/\]/g, '</sup>');
 
     return this.sanitizer.bypassSecurityTrustHtml(conteudo);

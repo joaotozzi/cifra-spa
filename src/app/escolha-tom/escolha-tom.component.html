@@ -1,0 +1,25 @@
+<h2 mat-dialog-title>Escolha o Tom</h2>
+<mat-dialog-content class="mat-typography">
+
+  <p>Tom original: {{ tomOriginal }}</p>
+
+  <mat-button-toggle-group class="mat-button-toggle-group" name="fontStyle" aria-label="Font Style" [(ngModel)]="tom">
+    <mat-button-toggle class="mat-button-toggle" value="C">C</mat-button-toggle>
+    <mat-button-toggle class="mat-button-toggle" value="Db">Db</mat-button-toggle>
+    <mat-button-toggle class="mat-button-toggle" value="D">D</mat-button-toggle>
+    <mat-button-toggle class="mat-button-toggle" value="Eb">Eb</mat-button-toggle>
+    <mat-button-toggle class="mat-button-toggle" value="E">E</mat-button-toggle>
+    <mat-button-toggle class="mat-button-toggle" value="F">F</mat-button-toggle>
+    <mat-button-toggle class="mat-button-toggle" value="F%23">F#</mat-button-toggle>
+    <mat-button-toggle class="mat-button-toggle" value="G">G</mat-button-toggle>
+    <mat-button-toggle class="mat-button-toggle" value="Ab">Ab</mat-button-toggle>
+    <mat-button-toggle class="mat-button-toggle" value="A">A</mat-button-toggle>
+    <mat-button-toggle class="mat-button-toggle" value="Bb">Bb</mat-button-toggle>
+    <mat-button-toggle class="mat-button-toggle" value="B">B</mat-button-toggle>
+  </mat-button-toggle-group>
+
+</mat-dialog-content>
+<mat-dialog-actions align="end">
+  <button mat-button mat-dialog-close>Cancelar</button>
+  <button mat-button [mat-dialog-close]="true" cdkFocusInitial (click)="atualizaTom()">Confirmar</button>
+</mat-dialog-actions>

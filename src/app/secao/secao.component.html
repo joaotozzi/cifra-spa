@@ -4,7 +4,10 @@
     <p id="nota-ensaio">{{ secao.notaDeEnsaio }}</p>
   </div>
 
-  <div *ngFor="let linha of secao.linhas">
-    <p class="linha" [innerHTML]="converterParaHTML(linha.conteudo)"></p>
+  <div class="linhas">
+    <div *ngFor="let linha of secao.linhas">
+      <p class="linha" [innerHTML]="converterParaHTML(linha.conteudo)"></p>
+    </div>
   </div>
 </div>
+
