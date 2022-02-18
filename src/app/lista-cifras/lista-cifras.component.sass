@@ -1,2 +1,98 @@
+*
+  font-family: 'Utopia', sans-serif
+
+#titulo
+  text-align: center
+
+.box
+  display: flex
+  flex-direction: column
+  gap: 30px
+  align-items: center
+
+.item
+  border-bottom: 1px solid #ddd9d9
+  border-top: 1px solid #ddd9d9
+
+#painel-busca
+  display: flex
+  flex-direction: row
+  justify-content: center
+  border: 0
+
+#busca
+  width: 60%
+
+#busca:focus
+  outline: none
+
+#btn-pesquisar
+  background-color: #222121
+  border-radius: 0px 5px 5px 0px
+  border: none
+  color: white
+  padding: 10px 5px 10px 5px
+  font-size: 10px
+  cursor: pointer
+
+.erro
+  font-style: italic
+  text-align: center
+
+.link-cifra
+  text-decoration: none
+
+.nome-cifra
+  color: black
+  margin-bottom: 0
+  margin-top: 20px
+
+.compositor-cifra
+  color: #a8a1a1
+  margin-top: 3px
+  margin-bottom: 20px
+
+// Smartphones
+@media (min-width: 0px)
+  .item
+    width: 85%
+
+  .nome-cifra
+    font-size: 15px
+
+  .compositor-cifra
+    font-size: 10px
+
+  .erro
+    font-size: 10px
 
 
+
+// Small devices (landscape phones, 576px and up)
+@media (min-width: 576px)
+  .item
+    width: 70%
+
+  .nome-cifra
+    font-size: 25px
+
+  .compositor-cifra
+    font-size: 12px
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px)
+  .item
+    width: 70%
+
+// Large devices (desktops, 992px and up)
+@media (min-width: 992px)
+  .item
+    width: 60%
+
+  .erro
+    font-size: 15px
+
+// Extra large devices (large desktops, 1200px and up)
+@media (min-width: 1200px)
+  .item
+    width: 45%
